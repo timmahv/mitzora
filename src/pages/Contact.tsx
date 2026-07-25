@@ -3,7 +3,7 @@ import type { FormEvent } from "react";
 import { Eyebrow } from "../components/Eyebrow";
 
 // TODO(config): replace with the team's real inbox once decided.
-const CONTACT_EMAIL = "hello@mitzora.ai";
+const CONTACT_EMAIL = "tim@mitzora.com";
 
 type FormState = {
   name: string;
@@ -17,6 +17,8 @@ const EMPTY_FORM: FormState = { name: "", email: "", company: "", message: "" };
 export function Contact() {
   const [form, setForm] = useState<FormState>(EMPTY_FORM);
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   function updateField(field: keyof FormState) {
     return (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -24,24 +26,30 @@ export function Contact() {
     };
   }
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    setError(null);
+    setSending(true);
 
-    const subject = `Mitzora inquiry from ${form.name || "website visitor"}`;
-    const bodyLines = [
-      `Name: ${form.name}`,
-      `Email: ${form.email}`,
-      form.company ? `Company: ${form.company}` : null,
-      "",
-      form.message,
-    ].filter((line): line is string => line !== null);
+    try {
+      const res = await fetch("/.netlify/functions/send-message", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
 
-    const mailtoUrl = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-      bodyLines.join("\n"),
-    )}`;
+      if (!res.ok) {
+        throw new Error("Failed to send message");
+      }
 
-    window.location.href = mailtoUrl;
-    setSubmitted(true);
+      setSubmitted(true);
+    } catch {
+      setError(
+        `Something went wrong sending your message. Please email us directly at ${CONTACT_EMAIL}.`,
+      );
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -57,15 +65,7 @@ export function Contact() {
             engineering org, we'd like to hear from you.
           </p>
         </div>
-        <div className="glass-card relative h-64 w-full overflow-hidden rounded-xl lg:h-80">
-          <div className="absolute bottom-6 left-6 right-6 rounded-lg border-l-4 border-primary-container bg-surface-container-high/80 p-4">
-            <p className="mb-1 font-mono text-label-md text-primary-fixed">RESPONSE TIME</p>
-            <div className="flex items-center justify-between">
-              <span className="text-body-md">We typically reply within</span>
-              <span className="font-mono text-label-sm text-primary-container">1 business day</span>
-            </div>
-          </div>
-        </div>
+
       </section>
 
       <div className="container-max mx-auto grid grid-cols-1 gap-gutter px-gutter lg:grid-cols-12">
@@ -156,11 +156,17 @@ export function Contact() {
                   className="rounded-lg border border-outline-variant bg-surface-container-high p-3 text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary-container"
                 />
               </div>
+              {error ? (
+                <p className="rounded-lg border border-error/30 bg-error/10 p-3 text-body-sm text-error">
+                  {error}
+                </p>
+              ) : null}
               <button
                 type="submit"
-                className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary-container py-4 font-bold text-on-primary transition-opacity hover:opacity-90"
+                disabled={sending}
+                className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary-container py-4 font-bold text-on-primary transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
               >
-                Send Message
+                {sending ? "Sending..." : "Send Message"}
               </button>
             </form>
           )}
@@ -193,10 +199,7 @@ export function Contact() {
                 <span className="material-symbols-outlined mt-0.5 text-primary-fixed">visibility</span>
                 A walkthrough of the agent workflows relevant to your team.
               </li>
-              <li className="flex items-start gap-3">
-                <span className="material-symbols-outlined mt-0.5 text-primary-fixed">schedule</span>
-                A response within one business day.
-              </li>
+
             </ul>
           </div>
         </div>

@@ -30,8 +30,7 @@ export function Solutions() {
           </h1>
           <p className="mt-6 max-w-xl text-body-lg text-on-surface-variant">
             Mitzora coordinates a fleet of specialized AI agents from ideation to delivery 
-            — as one connected, governed, auditted workflow instead of disconnected
-            point tools.
+            — as a unified, governed, auditted workflow instead of disconnected point tools and scattered artifacts.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link

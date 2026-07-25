@@ -107,7 +107,11 @@ export function About() {
               </div>
             </div>
             <h5 className="font-headline text-headline-md font-medium text-on-surface">Tim Vries</h5>
-            <p className="text-body-sm text-on-surface-variant">Founder</p>
+            <p className="text-body-sm text-on-surface-variant">With over 30 years of experience leading software engineering teams, Tim 
+              has helped many companies transform their processes allowing them to scale and grow efficiently and cost effectively.  
+              After seeing Agent AI projects fail because they were just automating tasks not outcomes, Tim decided to bring his 
+              extensive experience in software engineering and product strategy to design an Agentic system that augments human's 
+              inherent strengths to deliver world class software with speed and quality.</p>
           </div>
         </div>
       </section>
