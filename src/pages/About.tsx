@@ -98,7 +98,7 @@ export function About() {
               <img
                 src="/team/tim-vries.jpg"
                 alt="Tim Vries"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover object-top"
               />
               <div className="absolute bottom-4 left-4">
                 <span className="inline-block rounded bg-primary-container px-2 py-0.5 text-[10px] font-bold text-on-primary">
