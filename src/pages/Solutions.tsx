@@ -29,8 +29,8 @@ export function Solutions() {
             The agentic ecosystem for your SDLC.
           </h1>
           <p className="mt-6 max-w-xl text-body-lg text-on-surface-variant">
-            Mitzora coordinates a fleet of specialized AI agents across planning, engineering, QA,
-            security, and delivery — as one connected, governed workflow instead of disconnected
+            Mitzora coordinates a fleet of specialized AI agents from ideation to delivery 
+            — as one connected, governed, auditted workflow instead of disconnected
             point tools.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
@@ -43,19 +43,8 @@ export function Solutions() {
             </Link>
           </div>
         </div>
-        <div className="relative h-72 overflow-hidden rounded-xl border border-outline-variant bg-surface-container-low md:h-96">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="grid grid-cols-3 gap-4 p-8">
-              {["terminal", "shield_with_heart", "analytics"].map((icon) => (
-                <div
-                  key={icon}
-                  className="flex h-16 w-16 items-center justify-center rounded-full border border-primary-fixed bg-primary-fixed/10"
-                >
-                  <span className="material-symbols-outlined text-3xl text-primary-fixed">{icon}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+        <div className="relative flex h-72 items-center justify-center md:h-96">
+          <img src="/artifact.png" alt="Mitzora artifact view" className="h-full w-full rounded-lg object-contain" />
         </div>
       </section>
 
