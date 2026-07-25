@@ -56,19 +56,8 @@ export function Home() {
               </Link>
             </div>
           </div>
-          <div className="relative h-72 rounded-xl border border-outline-variant bg-surface-container-low md:h-96">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="grid grid-cols-2 gap-6 p-8">
-                {["terminal", "shield_with_heart", "fact_check", "cloud_sync"].map((icon) => (
-                  <div
-                    key={icon}
-                    className="flex h-16 w-16 items-center justify-center rounded-full border border-primary-fixed bg-primary-fixed/10"
-                  >
-                    <span className="material-symbols-outlined text-3xl text-primary-fixed">{icon}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+          <div className="relative flex h-72 items-center justify-center overflow-hidden rounded-xl border border-outline-variant bg-surface-container-low p-3 md:h-96">
+            <img src="/dashboard.png" alt="Mitzora dashboard" className="h-full w-full rounded-lg object-contain" />
           </div>
         </div>
       </section>
