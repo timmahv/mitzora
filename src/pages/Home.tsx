@@ -56,7 +56,7 @@ export function Home() {
               </Link>
             </div>
           </div>
-          <div className="relative flex h-72 items-center justify-center overflow-hidden rounded-xl border border-outline-variant bg-surface-container-low p-3 md:h-96">
+          <div className="relative flex h-72 items-center justify-center md:h-96">
             <img src="/dashboard.png" alt="Mitzora dashboard" className="h-full w-full rounded-lg object-contain" />
           </div>
         </div>
