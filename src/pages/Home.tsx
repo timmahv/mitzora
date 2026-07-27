@@ -5,7 +5,7 @@ const PILLARS = [
   {
     icon: "pan_tool",
     title: "Human-in-the-loop, always",
-    body: "Agents propose, draft, and execute — but every consequential step routes through an approval gate before it touches production or ships to customers.",
+    body: "Agents propose, draft, and execute — but every consequential step routes through an approval gate before it touches production or ships to customers. Catch hallucinations before they become code.",
   },
   {
     icon: "visibility",
@@ -14,8 +14,8 @@ const PILLARS = [
   },
   {
     icon: "hub",
-    title: "The whole SDLC, not a demo",
-    body: "Mitzora orchestrates planning, engineering, QA, security, and delivery as one connected workflow, not a collection of disconnected point tools.",
+    title: "Interconnected SDLC Workflows",
+    body: "Mitzora orchestrates planning, engineering, QA, security, and delivery as a set of interconnected workflows, not a collection of disconnected point tools.",
   },
 ];
 
