@@ -72,7 +72,7 @@ export function Contact() {
         <div className="glass-card rounded-xl p-8 lg:col-span-7">
           <h2 className="font-headline text-headline-lg font-semibold text-on-surface">Send us a message</h2>
           <p className="mb-12 mt-2 text-body-md text-on-surface-variant">
-            Fill this in and we'll open your email client with everything ready to send.
+            Let us know if you want to learn more about Mitzora or are interested in investing.
           </p>
 
           {submitted ? (

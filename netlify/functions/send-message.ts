@@ -54,6 +54,8 @@ export const handler: Handler = async (event) => {
   });
 
   if (!res.ok) {
+    const errorBody = await res.text();
+    console.error(`Resend API error (${res.status}): ${errorBody}`);
     return { statusCode: 502, body: JSON.stringify({ error: "Failed to send message" }) };
   }
 
