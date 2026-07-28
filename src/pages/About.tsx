@@ -34,7 +34,7 @@ export function About() {
           <p className="mt-6 text-body-lg text-on-surface-variant">
             Mitzora builds a human-led, AI-assisted platform for the software development lifecycle.
             We believe the future of engineering isn't AI working alone — it's AI agents handling the
-            cognitive load of delivery while engineers stay in the loop on everything that matters.
+            grunt work of delivery while engineers drive the direction on everything that matters.
           </p>
         </div>
       </section>
