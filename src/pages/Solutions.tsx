@@ -64,7 +64,7 @@ export function Solutions() {
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-body-md text-primary-fixed">check_circle</span>
-                <span>PRD and user-story generation</span>
+                <span>Product requirements and user-story generation</span>
               </li>
               <li className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-body-md text-primary-fixed">check_circle</span>
@@ -136,7 +136,7 @@ export function Solutions() {
             </li>
             <li className="flex items-center gap-3">
               <span className="material-symbols-outlined text-primary-fixed">check_circle</span>
-              <span className="text-body-sm">Compliance review mapped to frameworks like SOC 2</span>
+              <span className="text-body-sm">Compliance reviews mapped to frameworks like SOC 2, ISO-27001, HIPPA, PCI and more</span>
             </li>
           </ul>
         </div>
@@ -151,8 +151,8 @@ export function Solutions() {
                 Human-in-the-Loop Delivery
               </h2>
               <p className="mt-4 text-body-lg text-on-surface-variant">
-                Agents propose and draft; people approve. Every consequential step — merging code,
-                promoting an artifact, signing off on a review — waits on an explicit human decision,
+                Humans envision creative solutions; agents implement them. Every consequential step — merging code,
+                promoting an artifact, signing off on a review — waits on an explicit Human decision,
                 with notifications and reminders keeping approvers in the loop.
               </p>
             </div>

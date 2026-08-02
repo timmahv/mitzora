@@ -17,7 +17,7 @@ const VALUES = [
   {
     icon: "precision_manufacturing",
     title: "Engineering Rigor",
-    body: "We hold AI-generated work to the same bar as human-written work: reviewed, tested, and accountable — not \"good enough for a demo.\"",
+    body: "\"Vibe Coding\" just doesn't cut it in Production. We hold AI-generated work to the same bar as human-written work: reviewed, tested, and accountable — not \"good enough for a demo.\"",
     accent: "border-tertiary-fixed",
   },
 ];

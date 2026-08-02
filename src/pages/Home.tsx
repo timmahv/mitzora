@@ -34,11 +34,11 @@ export function Home() {
           <div>
             <Eyebrow>Human-led, AI-assisted SDLC Orchestration</Eyebrow>
             <h1 className="font-headline text-display-lg font-extrabold leading-tight text-on-surface">
-              The Human-led, AI-assisted engine for modern software delivery.
+              Human-led, AI-assisted engine for modern software delivery.
             </h1>
             <p className="mt-6 max-w-xl text-body-lg text-on-surface-variant">
-              Mitzora orchestrates a fleet of specialized AI agents, templates, and standards across your entire development
-              lifecycle <strong>to improve the speed and quality of software development</strong> — while keeping Humans firmly in control of every decision that matters.
+              We have consolidated over 30 years of Software Development Lifecycle (SDLC) experience and best practices into a unified pipeline to help your teams operate 
+              like an elite Engineering team.  Agents accelerate the rote and mundane tasks — while keeping Humans firmly in control of every decision that matters.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
@@ -78,8 +78,7 @@ export function Home() {
         <div className="mb-12 max-w-2xl">
           <h2 className="font-headline text-headline-lg font-semibold text-on-surface">How it works</h2>
           <p className="mt-2 text-body-md text-on-surface-variant">
-            One connected pipeline, from intent to shipped code — with an approval gate at every
-            consequential handoff.
+            One connected pipeline, from idea to shipped code — with a review and approval gate at every consequential handoff.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
