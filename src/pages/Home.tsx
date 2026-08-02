@@ -63,6 +63,49 @@ export function Home() {
       </section>
 
       <section className="container-max mx-auto mb-12 px-gutter">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-12">
+          <div className="glass-card rounded-xl p-8 md:col-span-7">
+            <Eyebrow>The Core Problem</Eyebrow>
+            <h2 className="font-headline text-headline-lg font-semibold text-on-surface">
+              Software development has never been a coding problem — it's a people problem.
+            </h2>
+            <p className="mt-4 text-body-md text-on-surface-variant">
+              Every successful application is the result of conversations, shared understanding,
+              tradeoffs, and thousands of decisions made across product, engineering, security,
+              QA, and operations. AI has made it possible to generate code at unprecedented speed,
+              but the rise of "vibe coding" exposes a fundamental limitation: generating software
+              is not the same as engineering software. Code produced from intuition or isolated
+              prompts often lacks the business context, architectural intent, traceability, and
+              cross-functional alignment that production systems require.
+            </p>
+          </div>
+          <div className="relative overflow-hidden rounded-xl border border-outline-variant bg-surface-container-high p-8 md:col-span-5">
+            <div className="absolute right-0 top-0 p-4 opacity-10">
+              <span className="material-symbols-outlined text-8xl">hub</span>
+            </div>
+            <h3 className="font-headline text-headline-md font-medium text-on-surface">
+              Why projects really fail
+            </h3>
+            <p className="relative z-10 mt-4 text-body-sm text-on-surface-variant">
+              It isn't that developers can't write code. It's that humans struggle to
+              consistently document decisions, absorb thousands of pages of requirements, and
+              correlate the countless relationships scattered across tickets, architecture,
+              source code, documentation, compliance artifacts, and team conversations.
+            </p>
+          </div>
+          <div className="rounded-xl border border-outline-variant bg-gradient-to-br from-surface to-surface-container-high p-8 md:col-span-12">
+            <p className="text-body-lg text-on-surface-variant">
+              Mitzora bridges this gap by combining human leadership with AI-powered reasoning
+              that continuously connects these disparate sources of truth. Instead of replacing
+              engineers, it amplifies their ability to understand context, preserve institutional
+              knowledge, and make informed decisions — transforming AI from a code generator into
+              a true engineering partner throughout the entire software development lifecycle.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="container-max mx-auto mb-12 px-gutter">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {PILLARS.map((pillar) => (
             <div key={pillar.title} className="glass-card rounded-xl p-8">
